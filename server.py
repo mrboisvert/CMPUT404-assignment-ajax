@@ -100,6 +100,7 @@ def world():
     '''you should probably return the world here'''
     if request.method == "POST":
         new_world = flask_post_json()
+        myWorld.clear()
         for key in new_world:
             myWorld.set(key, new_world[key])
     return myWorld.world()
